@@ -1,0 +1,323 @@
+res18_lr=5e-6
+首轮测试loss就降到了0.35，存在过拟合嫌疑。次轮loss下降基本确定过拟合，开始并行测试5e-7
+第3轮开始验证集loss开始抽象起来，想想还是跑完吧。
+看来按我想的调学习率没准真的对。。
+epoch=6开始回暖，然后寄了。
+lr: 5e-06
+Train Epoch: 1 [1600/5216 (31%)]        Loss: 0.340392
+Train Epoch: 1 [3200/5216 (61%)]        Loss: 0.260121
+Train Epoch: 1 [4800/5216 (92%)]        Loss: 0.271415
+train acc:86.4455%,epoch:1,loss:0.34577001288441794
+624 20
+
+Val set: Average loss: 0.4283, Accuracy: 487/624 (78.0449%)
+
+lr: 5e-06
+Train Epoch: 2 [1600/5216 (31%)]        Loss: 0.126663
+Train Epoch: 2 [3200/5216 (61%)]        Loss: 0.303271
+Train Epoch: 2 [4800/5216 (92%)]        Loss: 0.231709
+train acc:93.7117%,epoch:2,loss:0.18151184404554543
+624 20
+
+Val set: Average loss: 0.4222, Accuracy: 492/624 (78.8462%)
+
+lr: 5e-06
+Train Epoch: 3 [1600/5216 (31%)]        Loss: 0.220766
+Train Epoch: 3 [3200/5216 (61%)]        Loss: 0.061958
+Train Epoch: 3 [4800/5216 (92%)]        Loss: 0.120685
+train acc:96.0698%,epoch:3,loss:0.12515106168718426
+624 20
+
+Val set: Average loss: 0.4997, Accuracy: 482/624 (77.2436%)
+
+lr: 5e-06
+Train Epoch: 4 [1600/5216 (31%)]        Loss: 0.066495
+Train Epoch: 4 [3200/5216 (61%)]        Loss: 0.065929
+Train Epoch: 4 [4800/5216 (92%)]        Loss: 0.039951
+train acc:97.3735%,epoch:4,loss:0.09015506507108914
+624 20
+
+Val set: Average loss: 0.5469, Accuracy: 480/624 (76.9231%)
+
+lr: 5e-06
+Train Epoch: 5 [1600/5216 (31%)]        Loss: 0.063511
+Train Epoch: 5 [3200/5216 (61%)]        Loss: 0.082967
+Train Epoch: 5 [4800/5216 (92%)]        Loss: 0.018283
+train acc:98.1403%,epoch:5,loss:0.06383916638517306
+624 20
+
+Val set: Average loss: 0.5970, Accuracy: 472/624 (75.6410%)
+
+lr: 5e-06
+Train Epoch: 6 [1600/5216 (31%)]        Loss: 0.085022
+Train Epoch: 6 [3200/5216 (61%)]        Loss: 0.025445
+Train Epoch: 6 [4800/5216 (92%)]        Loss: 0.018610
+train acc:99.0222%,epoch:6,loss:0.046000570144527166
+624 20
+
+Val set: Average loss: 0.5980, Accuracy: 492/624 (78.8462%)
+
+lr: 5e-06
+Train Epoch: 7 [1600/5216 (31%)]        Loss: 0.021613
+Train Epoch: 7 [3200/5216 (61%)]        Loss: 0.023751
+Train Epoch: 7 [4800/5216 (92%)]        Loss: 0.009237
+train acc:99.4824%,epoch:7,loss:0.03257344263760042
+624 20
+
+Val set: Average loss: 0.6642, Accuracy: 487/624 (78.0449%)
+
+lr: 5e-06
+Train Epoch: 8 [1600/5216 (31%)]        Loss: 0.014214
+Train Epoch: 8 [3200/5216 (61%)]        Loss: 0.024781
+Train Epoch: 8 [4800/5216 (92%)]        Loss: 0.008488
+train acc:99.6741%,epoch:8,loss:0.022969736451957306
+624 20
+
+Val set: Average loss: 0.6686, Accuracy: 483/624 (77.4038%)
+
+lr: 5e-06
+Train Epoch: 9 [1600/5216 (31%)]        Loss: 0.006516
+Train Epoch: 9 [3200/5216 (61%)]        Loss: 0.011343
+Train Epoch: 9 [4800/5216 (92%)]        Loss: 0.030226
+train acc:99.8658%,epoch:9,loss:0.01579522214218563
+624 20
+
+Val set: Average loss: 0.6913, Accuracy: 491/624 (78.6859%)
+
+lr: 5e-06
+Train Epoch: 10 [1600/5216 (31%)]       Loss: 0.005594
+Train Epoch: 10 [3200/5216 (61%)]       Loss: 0.004413
+Train Epoch: 10 [4800/5216 (92%)]       Loss: 0.018387
+train acc:99.8850%,epoch:10,loss:0.012983742130040391
+624 20
+
+Val set: Average loss: 0.8509, Accuracy: 474/624 (75.9615%)
+#-----------------------------------------------------------------------------
+res18_lr=1e-6
+目前观测到的最佳学习率（废话，我先测的这个），等待测试5e-6，在第八轮出现验证集反向拟合，峰值acc83%，第九轮开始爆炸。
+lr: 1e-06
+Train Epoch: 1 [1600/5216 (31%)]        Loss: 1.067020
+Train Epoch: 1 [3200/5216 (61%)]        Loss: 0.873228
+Train Epoch: 1 [4800/5216 (92%)]        Loss: 0.705336
+train acc:36.9440%,epoch:1,loss:0.8817041205482249
+624 20
+
+Val set: Average loss: 0.6960, Accuracy: 388/624 (62.1795%)
+
+lr: 1e-06
+Train Epoch: 2 [1600/5216 (31%)]        Loss: 0.759566
+Train Epoch: 2 [3200/5216 (61%)]        Loss: 0.468486
+Train Epoch: 2 [4800/5216 (92%)]        Loss: 0.650956
+train acc:69.0951%,epoch:2,loss:0.651168712809042
+624 20
+
+Val set: Average loss: 0.5502, Accuracy: 477/624 (76.4423%)
+
+lr: 1e-06
+Train Epoch: 3 [1600/5216 (31%)]        Loss: 0.565779
+Train Epoch: 3 [3200/5216 (61%)]        Loss: 0.588441
+Train Epoch: 3 [4800/5216 (92%)]        Loss: 0.558063
+train acc:79.3136%,epoch:3,loss:0.5153973837571642
+624 20
+
+Val set: Average loss: 0.4857, Accuracy: 496/624 (79.4872%)
+
+lr: 1e-06
+Train Epoch: 4 [1600/5216 (31%)]        Loss: 0.575967
+Train Epoch: 4 [3200/5216 (61%)]        Loss: 0.470306
+Train Epoch: 4 [4800/5216 (92%)]        Loss: 0.322447
+train acc:84.7776%,epoch:4,loss:0.4212903685730659
+624 20
+
+Val set: Average loss: 0.4408, Accuracy: 509/624 (81.5705%)
+
+lr: 1e-06
+Train Epoch: 5 [1600/5216 (31%)]        Loss: 0.379837
+Train Epoch: 5 [3200/5216 (61%)]        Loss: 0.454587
+Train Epoch: 5 [4800/5216 (92%)]        Loss: 0.294910
+train acc:88.2094%,epoch:5,loss:0.34689556510170544
+624 20
+
+Val set: Average loss: 0.4170, Accuracy: 506/624 (81.0897%)
+
+lr: 1e-06
+Train Epoch: 6 [1600/5216 (31%)]        Loss: 0.339860
+Train Epoch: 6 [3200/5216 (61%)]        Loss: 0.256353
+Train Epoch: 6 [4800/5216 (92%)]        Loss: 0.314997
+train acc:90.7975%,epoch:6,loss:0.29523322735827395
+624 20
+
+Val set: Average loss: 0.4032, Accuracy: 514/624 (82.3718%)
+
+lr: 1e-06
+Train Epoch: 7 [1600/5216 (31%)]        Loss: 0.284162
+Train Epoch: 7 [3200/5216 (61%)]        Loss: 0.301106
+Train Epoch: 7 [4800/5216 (92%)]        Loss: 0.295810
+train acc:92.2546%,epoch:7,loss:0.2501232616283411
+624 20
+
+Val set: Average loss: 0.3858, Accuracy: 518/624 (83.0128%)
+
+lr: 1e-06
+Train Epoch: 8 [1600/5216 (31%)]        Loss: 0.187839
+Train Epoch: 8 [3200/5216 (61%)]        Loss: 0.293533
+Train Epoch: 8 [4800/5216 (92%)]        Loss: 0.288169
+train acc:93.0598%,epoch:8,loss:0.22360870452380618
+624 20
+
+Val set: Average loss: 0.4115, Accuracy: 502/624 (80.4487%)
+
+lr: 1e-06
+Train Epoch: 9 [1600/5216 (31%)]        Loss: 0.186585
+Train Epoch: 9 [3200/5216 (61%)]        Loss: 0.307952
+Train Epoch: 9 [4800/5216 (92%)]        Loss: 0.175458
+train acc:94.4210%,epoch:9,loss:0.19496652584500107
+624 20
+
+Val set: Average loss: 0.4107, Accuracy: 503/624 (80.6090%)
+
+lr: 1e-06
+Train Epoch: 10 [1600/5216 (31%)]       Loss: 0.184434
+Train Epoch: 10 [3200/5216 (61%)]       Loss: 0.137221
+Train Epoch: 10 [4800/5216 (92%)]       Loss: 0.142854
+train acc:94.8620%,epoch:10,loss:0.17515847105190066
+624 20
+
+Val set: Average loss: 0.4031, Accuracy: 505/624 (80.9295%)
+#-----------------------------------------------------------------------------
+res18_lr=5e-7
+这学习率我感觉行。第六轮稳步上涨ing
+话说初始是0.0000250，我改的0.0000005，50倍哦，我的预测蛮准的哦
+第八轮开始小幅下降。
+lr: 5e-07
+Train Epoch: 1 [1600/5216 (31%)]        Loss: 0.668120
+Train Epoch: 1 [3200/5216 (61%)]        Loss: 0.610430
+Train Epoch: 1 [4800/5216 (92%)]        Loss: 0.610046
+train acc:56.9018%,epoch:1,loss:0.6759550520247477
+624 20
+
+Val set: Average loss: 0.6159, Accuracy: 463/624 (74.1987%)
+
+lr: 5e-07
+Train Epoch: 2 [1600/5216 (31%)]        Loss: 0.650670
+Train Epoch: 2 [3200/5216 (61%)]        Loss: 0.591472
+Train Epoch: 2 [4800/5216 (92%)]        Loss: 0.617451
+train acc:76.5337%,epoch:2,loss:0.5717763306538751
+624 20
+
+Val set: Average loss: 0.5634, Accuracy: 474/624 (75.9615%)
+
+lr: 5e-07
+Train Epoch: 3 [1600/5216 (31%)]        Loss: 0.614630
+Train Epoch: 3 [3200/5216 (61%)]        Loss: 0.605942
+Train Epoch: 3 [4800/5216 (92%)]        Loss: 0.526352
+train acc:80.5790%,epoch:3,loss:0.5037952500618309
+624 20
+
+Val set: Average loss: 0.5180, Accuracy: 479/624 (76.7628%)
+
+lr: 5e-07
+Train Epoch: 4 [1600/5216 (31%)]        Loss: 0.513006
+Train Epoch: 4 [3200/5216 (61%)]        Loss: 0.432783
+Train Epoch: 4 [4800/5216 (92%)]        Loss: 0.479211
+train acc:83.5123%,epoch:4,loss:0.45179882718741526
+624 20
+
+Val set: Average loss: 0.4878, Accuracy: 484/624 (77.5641%)
+
+lr: 5e-07
+Train Epoch: 5 [1600/5216 (31%)]        Loss: 0.409744
+Train Epoch: 5 [3200/5216 (61%)]        Loss: 0.370478
+Train Epoch: 5 [4800/5216 (92%)]        Loss: 0.419378
+train acc:85.6403%,epoch:5,loss:0.40987944584682673
+624 20
+
+Val set: Average loss: 0.4649, Accuracy: 495/624 (79.3269%)
+
+lr: 5e-07
+Train Epoch: 6 [1600/5216 (31%)]        Loss: 0.411108
+Train Epoch: 6 [3200/5216 (61%)]        Loss: 0.358420
+Train Epoch: 6 [4800/5216 (92%)]        Loss: 0.396190
+train acc:87.0782%,epoch:6,loss:0.37717480180453666
+624 20
+
+Val set: Average loss: 0.4491, Accuracy: 498/624 (79.8077%)
+
+lr: 5e-07
+Train Epoch: 7 [1600/5216 (31%)]        Loss: 0.322755
+Train Epoch: 7 [3200/5216 (61%)]        Loss: 0.261613
+Train Epoch: 7 [4800/5216 (92%)]        Loss: 0.466769
+train acc:88.4586%,epoch:7,loss:0.344439942869672
+624 20
+
+Val set: Average loss: 0.4338, Accuracy: 500/624 (80.1282%)
+
+lr: 5e-07
+Train Epoch: 8 [1600/5216 (31%)]        Loss: 0.271663
+Train Epoch: 8 [3200/5216 (61%)]        Loss: 0.347896
+Train Epoch: 8 [4800/5216 (92%)]        Loss: 0.382864
+train acc:89.5705%,epoch:8,loss:0.31916697442165914
+624 20
+
+Val set: Average loss: 0.4264, Accuracy: 498/624 (79.8077%)
+
+lr: 5e-07
+Train Epoch: 9 [1600/5216 (31%)]        Loss: 0.295710
+Train Epoch: 9 [3200/5216 (61%)]        Loss: 0.343782
+Train Epoch: 9 [4800/5216 (92%)]        Loss: 0.213697
+train acc:90.6058%,epoch:9,loss:0.297632384245381
+624 20
+
+Val set: Average loss: 0.4105, Accuracy: 506/624 (81.0897%)
+
+lr: 5e-07
+Train Epoch: 10 [1600/5216 (31%)]       Loss: 0.281763
+Train Epoch: 10 [3200/5216 (61%)]       Loss: 0.204640
+Train Epoch: 10 [4800/5216 (92%)]       Loss: 0.307507
+train acc:91.4494%,epoch:10,loss:0.2735691055015552
+624 20
+
+Val set: Average loss: 0.4025, Accuracy: 511/624 (81.8910%)
+
+#-----------------------------------------------------------------------------
+res18_lr=1e-7
+欠拟合，基本分类没有作用，3轮epoch后考虑停止训练。看下面这，基本都判到了类别1里，想吐糟一下为什么分类数据集两个类别的量不一样。
+lr: 1e-07
+Train Epoch: 1 [1600/5216 (31%)]        Loss: 0.760789
+Train Epoch: 1 [3200/5216 (61%)]        Loss: 0.586319
+Train Epoch: 1 [4800/5216 (92%)]        Loss: 0.613454
+train acc:74.2906%,epoch:1,loss:0.6271394465598592
+624 20
+
+Val set: Average loss: 0.7216, Accuracy: 390/624 (62.5000%)
+
+lr: 1e-07
+Train Epoch: 2 [1600/5216 (31%)]        Loss: 0.531632
+Train Epoch: 2 [3200/5216 (61%)]        Loss: 0.539373
+Train Epoch: 2 [4800/5216 (92%)]        Loss: 0.679091
+train acc:74.2906%,epoch:2,loss:0.588613325467139
+624 20
+
+Val set: Average loss: 0.6889, Accuracy: 390/624 (62.5000%)
+
+lr: 1e-07
+Train Epoch: 3 [1600/5216 (31%)]        Loss: 0.597424
+Train Epoch: 3 [3200/5216 (61%)]        Loss: 0.581794
+Train Epoch: 3 [4800/5216 (92%)]        Loss: 0.501890
+train acc:74.2906%,epoch:3,loss:0.5537075789793868
+624 20
+
+Val set: Average loss: 0.6620, Accuracy: 390/624 (62.5000%)
+
+lr: 1e-07
+Train Epoch: 4 [1600/5216 (31%)]        Loss: 0.461467
+Train Epoch: 4 [3200/5216 (61%)]        Loss: 0.481601
+Train Epoch: 4 [4800/5216 (92%)]        Loss: 0.552334
+train acc:74.2906%,epoch:4,loss:0.5254210571935571
+624 20
+
+Val set: Average loss: 0.6422, Accuracy: 390/624 (62.5000%)
+
+lr: 1e-07
+#-----------------------------------------------------------------------------
+
